@@ -24,10 +24,10 @@ Display the total number of likes and
 whether the button is in the selected or unselected state on the console. 
 
 */
-export class like_function{
+export class Like_Functionality{
     private _state:number = 0;
     constructor (private _likes?:number){}
-    like(){
+   like(){
 
         if(this._state == 0)
         {
@@ -45,28 +45,28 @@ export class like_function{
             this._state = 0;
         }
         
-    }
-    /*get state(){
-        return this._state;
+    } 
+/*
+    get likes(){
+        return this._likes;
     }   
 
-    set state(value){
+    set state(value:string){
 
-        if(value =0){
-            this._state = 1;
+        if(value =='liked'){
             console.log('the button is on now');
+            this._likes+=1;
         }
 
-        else{
-            this._state = 0;
+        else if(value == 'unliked'){
             console.log('the button is off now')
+            this._likes-=1;
         }
 
     } */
 }
 
-let first_user = new like_function(10);
-
+let first_user = new Like_Functionality(10);
 first_user.like();
 first_user.like();
 first_user.like();
