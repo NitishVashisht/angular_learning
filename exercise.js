@@ -25,12 +25,12 @@ Display the total number of likes and
 whether the button is in the selected or unselected state on the console.
 
 */
-var like_function = (function () {
-    function like_function(_likes) {
+var like_functionality = (function () {
+    function like_functionality(_likes) {
         this._likes = _likes;
         this._state = 0;
     }
-    like_function.prototype.like = function () {
+    like_functionality.prototype.like = function () {
         if (this._state == 0) {
             this._likes += 1;
             console.log('Liked and number of likes are :- ' + this._likes);
@@ -45,10 +45,10 @@ var like_function = (function () {
             this._state = 0;
         }
     };
-    return like_function;
+    return like_functionality;
 }());
-exports.like_function = like_function;
-var first_user = new like_function(10);
+exports.like_functionality = like_functionality;
+var first_user = new like_functionality(10);
 first_user.like();
 first_user.like();
 first_user.like();
